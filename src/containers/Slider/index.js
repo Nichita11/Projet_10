@@ -27,7 +27,7 @@ const Slider = () => {
   return (
     <div className="SlideCardList">
       {byDateDesc?.map((event, idx) => (
-        <Fragment key={Math.floor(Math.random() * 100000)}>
+        <Fragment key={event.title}>
           <div
             className={`SlideCard SlideCard--${
               index === idx ? "display" : "hide"
@@ -46,7 +46,7 @@ const Slider = () => {
             <div className="SlideCard__pagination">
               {byDateDesc.map((_, radioIdx) => (
                 <input
-                  key={Math.floor(Math.random() * 100000)}
+                  key={_.title}
                   type="radio"
                   name="radio-button"
                   checked={index === radioIdx}

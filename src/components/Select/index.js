@@ -33,20 +33,17 @@ const Select = ({
               {!titleEmpty && (
                 <li onClick={() => changeValue(null)}>
                   <input
-                    checked={value===null}
+                    checked={value === null}
                     name="selected"
                     type="radio"
+                    readOnly
                   />{" "}
                   Toutes
                 </li>
               )}
               {selection.map((s) => (
                 <li key={s} onClick={() => changeValue(s)}>
-                  <input
-                    checked={value === s}
-                    name="selected"
-                    type="radio"
-                  />{" "}
+                  <input checked={value === s} name="selected" type="radio" />{" "}
                   {s}
                 </li>
               ))}

@@ -109,11 +109,7 @@ const Page = () => {
             }
           >
             {({ setIsOpened }) => (
-              <Form
-                setOpenModal={() => setIsOpened(true)}
-                onSuccess={() => setIsOpened(true)}
-                onError={() => null}
-              />
+              <Form onSuccess={() => setIsOpened(true)} onError={() => null} />
             )}
           </Modal>
         </div>
